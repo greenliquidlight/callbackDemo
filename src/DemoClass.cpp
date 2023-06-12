@@ -2,12 +2,12 @@
 
 void DemoClass::printNumberInDec(int number) 
 {
-    std::cout << "Number: " << number << "\n";
+    std::cout << "Class Member - Number: " << number << "\n";
 }
 
 void DemoClass::printNumberInHex(int number) 
 {
-    std::cout << "Number: 0x" << std::hex << number << "\n";
+    std::cout << "Class Member - Number: 0x" << std::hex << number << "\n";
 }
 
 void DemoClass::setCallback(std::function<void(int)> callback) 
@@ -19,6 +19,3 @@ void DemoClass::runCallback(int number)
 {
     callbackFunction(number);
 }
-
-
-

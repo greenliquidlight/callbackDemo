@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <CallbackDemo.h>
+#include <Callback.h>
 
 #ifdef NO_CLASS
 // local function pointer that will be used to call the callback function

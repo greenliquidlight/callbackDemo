@@ -1,6 +1,9 @@
 #ifndef CALLBACK_DEMO_H
 #define CALLBACK_DEMO_H
 
+// uncomment this line to use the class version
+// #define NO_CLASS
+
 #ifdef NO_CLASS
 typedef void (*CallbackFunction)(int);
 
