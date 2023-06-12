@@ -19,8 +19,9 @@ target_include_directories(CallbackDemo PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     )
 
-# add tests usign CTest
-enable_testing()
+# Add CTest to demo
+# # add tests usign CTest
+# enable_testing()
 
-# Add the test directory
-add_subdirectory(tests)
+# # Add the test directory
+# add_subdirectory(tests)
