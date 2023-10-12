@@ -1,7 +1,7 @@
 #ifndef CALLBACK_DEMO_H
 #define CALLBACK_DEMO_H
 
-// uncomment this line to use the class version
+// uncomment this line to use the classless (plain c) version
 // #define NO_CLASS
 
 #ifdef NO_CLASS
