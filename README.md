@@ -1,8 +1,17 @@
-# callbackDemo
-Demo project showing how to use c type callback to invoke c++ member functions using a lambda function
+# Purpose
+This is a demo project showing the following using cmake:
+- [X] Generate a library from c files
+- [X] Generate a library from cpp files
+- [ ] Running tests using cmake
+- [ ] Using a non-static C# method as a callback in a C function
+- [ ] Using a non-static C# method as a callback in a C++ method
 
-Comment the #define NO_CLASS line to see the version showing how it is used with a class vs non-class (like traditional c-style callback).
+# Structure
+At the top, there is a `CMakeLists.txt` that uses the `CMakeLists.txt` in each subdirectory to build everything in the project.
+## C Library
+The sources for the c library are in the `c_library` directory.
+## C++ Library
+The sources for the c++ library are in the `cpp_library` directory.
 
-# Tasks
-- [X] Create a c function that demostrates using 2 callback functions by reassigning the callback function that is invoked by a static c function.
-- [X] Create a c++ class with 2 member functions that can be used as the callback functions invoked by the c callback function.
+## Tests
+The tests are in the `tests` directory.

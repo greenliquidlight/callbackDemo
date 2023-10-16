@@ -1,12 +1,12 @@
-#ifndef DEMOCLASS_H
-#define DEMOCLASS_H
+#ifndef CPP_CALLBACK_H
+#define CPP_CALLBACK_H
 
 #include <iostream>
 #include <functional>
 
 using namespace std;
 
-class DemoClass 
+class Cpp_Callback 
 {
     public:
         void printNumberInDec(int number);
@@ -17,4 +17,4 @@ class DemoClass
     private:
         std::function<void(int)> callbackFunction;
 };
-#endif // DEMOCLASS_H
+#endif // CPP_CALLBACK_H
