@@ -1,4 +1,4 @@
-* Purpose
+# Purpose
 This is a demo project showing the following using cmake:
 - [X] Generate a library from c files
 - [X] Generate a library from cpp files
