@@ -1,5 +1,11 @@
 cmake_minimum_required(VERSION 3.20)
-project(CallbackDemo)
+project(CallbackDemo C CXX)
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/c_library)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/cpp_library)
+set(CMAKE_C_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
+
+add_subdirectory(c_library)
+add_subdirectory(cpp_library)
+
+include(Ctest)
+add_subdirectory(tests)

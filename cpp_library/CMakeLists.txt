@@ -9,6 +9,8 @@ project(Cpp_Callback CXX)
 # create a shared library
 add_library(Cpp_Callback SHARED)
 
-#add the include directory to the library
-target_include_directories(Cpp_Callback PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
-target_sources(Cpp_Callback PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src/Cpp_Callback.cpp")
+# add the include directory to the library
+target_include_directories(Cpp_Callback PUBLIC include)
+
+# add the source files to the library
+target_sources(Cpp_Callback PRIVATE src/Cpp_Callback.cpp)
