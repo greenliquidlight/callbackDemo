@@ -7,5 +7,5 @@ set(CMAKE_CXX_STANDARD 20)
 add_subdirectory(c_library)
 add_subdirectory(cpp_library)
 
-include(Ctest)
+include(CTest)
 add_subdirectory(tests)
