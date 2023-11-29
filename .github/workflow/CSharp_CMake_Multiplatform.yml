@@ -1,0 +1,45 @@
+
+name: CSharp CMake Multiplatform Build
+
+on:
+  push:
+    branches:
+      - csharp
+  pull_request:
+    branches:
+      - csharp
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 8.0
+
+      - name: Install CMake
+        run: |
+          if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
+            sudo apt-get update
+            sudo apt-get install -y cmake
+          fi
+
+      - name: Build CMake project
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
+
+      - name: Run C# tests
+        run: |
+          dotnet test
