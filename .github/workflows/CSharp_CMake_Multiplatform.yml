@@ -51,6 +51,7 @@ jobs:
         run: |
           cmake --build ${{ steps.strings.outputs.build-output-dir }}
 
-      - name: Run C# tests
-        run: |
-          dotnet test
+      # add after we have a test to run
+      # - name: Run C# tests
+      #   run: |
+      #     dotnet test
