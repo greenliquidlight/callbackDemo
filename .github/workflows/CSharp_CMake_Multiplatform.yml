@@ -50,7 +50,6 @@ jobs:
       - name: Build CMake project
         run: |
           cmake --build ${{ steps.strings.outputs.build-output-dir }}
-          --target install
 
       - name: Run C# tests
         run: |
