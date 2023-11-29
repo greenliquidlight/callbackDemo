@@ -32,11 +32,12 @@ jobs:
 
       - name: Install CMake
         run: |
-          if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
+          if (${{ matrix.os }} -eq "ubuntu-latest") {
             sudo apt-get update
             sudo apt-get install -y cmake
-          fi
-
+          }
+        shell: pwsh
+    
       - name: Build CMake project
         run: |
           mkdir build
