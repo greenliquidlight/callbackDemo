@@ -1,16 +1,10 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.10)
 
-project(CSharpCallbackDemo VERSION 1.0.0 LANGUAGES CSharp)
+project(CSharpCallbackDemo NONE) # Set the project language to NONE
 
-#define the executable
-add_executable(CSharpCallbackDemo
-    Program.cs
+# Add a custom target that runs dotnet build
+add_custom_target(CSharpBuild ALL
+    COMMAND dotnet build
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src/callbackdemo
+    COMMENT "Building C# project using dotnet CLI"
 )
-
-#set the properties for the project
-set_property(TARGET CSharpCallbackDemo 
-    PROPERTY VS_DOTNET_REFERENCES "System"
-)
-
-#set the .NET Framework version for the project
-set(CMAKE_CSharp_FLAGS "/langversion:latest")
